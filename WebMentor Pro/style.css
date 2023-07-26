@@ -1,0 +1,163 @@
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+.main{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.nav{
+    height: 100px;
+    width: 100%;
+    /* background-color: red; */
+    border-bottom: 2px solid #dadada;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 0 4vw;
+}
+
+.nav-2{
+    display: flex;
+    /* align-items: center;
+    justify-content: space-between;
+    this won't work since there's no space in the div to provide space between , so we make use of gap*/
+    gap: 4vw;
+    align-items: center; /* to get menu icon to the center*/
+}
+
+.nav h2{
+    font-size: 1.5vw;
+    font-weight: 700;
+}
+
+.nav h4{
+    font-size: 1.1vw;
+}
+
+.nav i{
+    font-size: 1.6vw;
+    font-weight: 800;
+    display: none;/* icon will not be visible */
+}
+
+.nav button{
+    font-size: 1vw;
+    padding: 0.7vw 1.4vw;
+    background-color: lightseagreen;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+
+.content{
+    width:100%;
+    height:calc(100% - 100px);/* since our h of main div is 100% and nav div is 100px so to calculate the remaining area/height we make use of calc dunction*/
+    display: flex;
+    position: relative;
+}
+
+.left{
+    width: 55%;
+    height: 100%;
+    /* background-color: crimson; */
+    padding: 5vw 4vw ; /* padding of nav and this content should be same for proper alignment
+     for Logo and Learn to appear in same line vertically*/
+} 
+
+.left h1{
+    font-size: 4.2vw;
+    line-height: 4vw;
+}
+
+.left h1 span{
+    color: lightseagreen;
+}
+
+.left p{
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: #666;
+    width: 80%;
+    margin-top: 1.5vw;
+    margin-bottom: 3vw;
+}
+ /*this button is called cta-called through action , it necessary to have a cta in a website*/
+.content button{
+    font-size: 1.5vw;
+    padding: 1.1vw 2.1vw;
+    background-color: lightseagreen;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.right{
+    width: 45%;
+    height: 100%;
+    /* background-color: blueviolet; */
+}
+
+.right img{
+    width: 100%;
+    height: 100%; /*the img fits into the right div 100% */
+}
+
+@media (max-width:600px){
+    .nav{
+        /* background-color: lightseagreen;
+        color: #fff; */
+        padding: 0 6vw;
+        height: 60px;
+    }
+    .nav h2{
+        font-size: 5.1vw;
+    }
+    .nav h4{
+        font-size: 4vw;
+        display: none;
+    }
+    .nav buttton{
+        display: none;
+    }
+    .nav i{
+        display: block;
+        font-size: 4.5vw;
+    }
+    .content{
+        width: ;
+        height: calc(100% - 60px);
+        flex-direction: column;
+    }
+    .left{
+        width: 100%;
+        height: 45%;
+        padding: 4vw 6vw;
+    }
+    .right{
+        width: 100%;
+        height: 55%;
+    }
+    .left h1{
+        font-size: 10vw;
+        line-height: 11vw;
+    }
+    .left p{
+        font-size: 3vw;
+        width: 90%;
+        margin-top: 5vw;
+        margin-bottom: 6vw;
+    }
+    .content button{
+        padding: 3vw 6vw;
+        border-radius: 3px;
+        font-size: 3.5vw;
+        font-weight: 600;
+    }
+}
